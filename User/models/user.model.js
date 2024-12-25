@@ -7,12 +7,14 @@ const userSchema=new mongoose.Schema({
     },
     email:{
         type: String,
-        unique: true
+        unique: true,
+        required: true
     },
     password:{
         type:String,
-        required: true
+        required: true,
+        select:false
     }
-});
+})
 
 module.exports=mongoose.model('user',userSchema);
