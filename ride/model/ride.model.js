@@ -21,6 +21,8 @@ const rideSchema=new mongoose.Schema({
         enum:['requested','accepted','started','completed'],
         default:'requested'
     }
+},{
+    timeseries:true
 })
 
 module.exports=mongoose.model('ride',rideSchema);

@@ -5,6 +5,9 @@ const dotenv=require('dotenv')
 dotenv.config()
 const cookieParser=require('cookie-parser')
 const connect=require('./db/db')
+const rabbitMq=require('./service/rabbit')
+
+rabbitMq.connect()
 
 connect()
 

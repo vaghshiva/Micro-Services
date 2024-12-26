@@ -10,6 +10,8 @@ const blacklistTokenSchema=new mongoose.Schema({
         default:Date.now,
         expires:3600
     }
+},{
+    timestamps:true
 })
 
 module.exports=mongoose.model('blacklisttoken',blacklistTokenSchema);
